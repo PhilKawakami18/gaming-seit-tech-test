@@ -11,5 +11,7 @@ stop:
 logs:
 	docker logs -f sbg-tech-test-app
 
-test: stop start
-	# Feel free to put your test commands here
+test: 
+    docker run --network host -t postman/newman run "https://www.getpostman.com/collections/bcd75a02a6fa6a264425" 
+
+	
