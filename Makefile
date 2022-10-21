@@ -2,7 +2,7 @@ APP_IMAGE=:latest
 APP_RUNNING_PORT=4000
 
 start:
-	docker run -d -p ${APP_RUNNING_PORT}:4000 --name sbg-tech-test-app ngr05/sbg-gaming-seit-tech-test${APP_IMAGE}
+	docker run -d -p 4000:4000 --name sbg-tech-test-app ngr05/sbg-gaming-seit-tech-test${APP_IMAGE}
 
 stop:
 	docker stop sbg-tech-test-app
